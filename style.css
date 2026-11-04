@@ -676,3 +676,101 @@ main {
     }
 }
 
+
+/* ABOUT ME - VISUAL REDESIGN */
+
+.intro-section {
+    background:
+        radial-gradient(ellipse at 10% 50%, rgba(37, 99, 235, 0.10), transparent 55%),
+        #121F33;
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-description {
+    position: relative;
+    padding-left: 25px;
+    border-left: 3px solid var(--accent);
+}
+
+.about-description h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.about-description .eyebrow {
+    margin-bottom: 12px;
+}
+
+.about-description p:not(.eyebrow) {
+    color: #B8C5D8;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    max-width: 650px;
+}
+
+.about-details {
+    display: grid;
+    gap: 18px;
+}
+
+.detail-card {
+    position: relative;
+    padding: 25px;
+    background: linear-gradient(135deg, #1B2B44, #17243A);
+    border: 1px solid #304766;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.detail-card:hover {
+    transform: translateX(6px);
+    border-color: var(--accent-light);
+}
+
+.detail-label {
+    display: block;
+    color: var(--accent-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.detail-card h3 {
+    color: #FFFFFF;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.detail-card p {
+    color: #AAB6C8;
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .intro-section {
+        padding: 70px 8%;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-description h2 {
+        font-size: 34px;
+    }
+}
