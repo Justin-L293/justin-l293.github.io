@@ -557,3 +557,18 @@ footer .muted {
         grid-template-columns: 1fr;
     }
 }
+
+.experience-card h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.experience-card ul {
+    padding-left: 25px;
+    margin: 10px 0 20px;
+}
+
+.experience-card li {
+    font-weight: 400;
+    margin-bottom: 8px;
+}
