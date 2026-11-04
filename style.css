@@ -615,3 +615,64 @@ main {
         max-width: 100%;
     }
 }
+
+
+/* ABOUT ME SECTION */
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 65px;
+    align-items: start;
+}
+
+.about-description h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.about-description p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 18px;
+    max-width: 700px;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 7px;
+    padding: 22px;
+}
+
+.detail-label {
+    color: var(--accent-light);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.detail-card h3 {
+    margin: 8px 0 4px;
+    font-size: 17px;
+}
+
+.detail-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
