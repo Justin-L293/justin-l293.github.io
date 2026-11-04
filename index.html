@@ -4,67 +4,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Ly | IT & Cybersecurity</title>
+    <title>Justin Ly | IT & Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo">JUSTIN LY</a>
+<header class="navbar">
+    <a href="#home" class="logo">JUSTIN LY<span>.</span></a>
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#experience">IT Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#cybersecurity">Cybersecurity</a>
-                <a href="#about">About</a>
-            </div>
-        </nav>
-    </header>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#experience">IT Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#cybersecurity">Cybersecurity</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
 
-    <main>
-        <section id="home" class="hero">
+<main>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
             <p class="eyebrow">IT SUPPORT & CYBERSECURITY</p>
-            <h1>Technical Skills.<br>Practical Experience.<br>Continuous Learning.</h1>
-            <p class="intro">
-                Welcome to my professional portfolio.
-                Explore my IT experience, technical projects,
-                and cybersecurity work.
-            </p>
-            <a href="#about" class="button">Explore My Portfolio</a>
-        </section>
 
-        <section id="experience" class="section">
+            <h1>
+                Technical Skills.<br>
+                Practical Experience.<br>
+                <span>Continuous Learning.</span>
+            </h1>
+
+            <p class="hero-description">
+                I'm Justin Ly, an IT and cybersecurity student
+                with hands-on experience in technical support,
+                systems administration, and cybersecurity.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="button">Explore My Work</a>
+                <a href="#about" class="button secondary">About Me</a>
+            </div>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="tech-circle">IT<br>&<br>CYBER</div>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+        <div class="section-heading">
+            <p class="eyebrow">INTRODUCTION</p>
+            <h2>About My Work</h2>
+        </div>
+
+        <p class="intro-text">
+            I am pursuing a Bachelor of Applied Science in
+            Cybersecurity and Digital Forensics at Highline College.
+            My experience combines professional IT support,
+            hands-on virtual lab environments, and cybersecurity
+            coursework. I enjoy troubleshooting technical problems,
+            understanding how systems work, and continuously
+            developing practical skills.
+        </p>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="highlights section">
+        <div class="section-heading">
+            <p class="eyebrow">WHAT I DO</p>
+            <h2>Areas of Experience</h2>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="info-card">
+                <div class="card-icon">01</div>
+                <h3>IT Support & Administration</h3>
+                <p>
+                    User support, Active Directory account
+                    administration, Microsoft 365, and
+                    troubleshooting.
+                </p>
+                <a href="#experience">Explore Experience →</a>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">02</div>
+                <h3>Cybersecurity</h3>
+                <p>
+                    Network traffic analysis, security
+                    investigations, threat hunting, and
+                    digital forensics.
+                </p>
+                <a href="#cybersecurity">Explore Skills →</a>
+            </article>
+
+            <article class="info-card">
+                <div class="card-icon">03</div>
+                <h3>Technical Projects</h3>
+                <p>
+                    VMware environments, Linux systems,
+                    Bash scripting, and file encryption.
+                </p>
+                <a href="#projects">View Projects →</a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section id="projects" class="projects-section">
+        <div class="section-heading">
+            <p class="eyebrow">MY WORK</p>
+            <h2>Featured Projects</h2>
+            <p class="section-description">
+                A selection of technical projects and hands-on
+                learning experiences.
+            </p>
+        </div>
+
+        <div class="card-grid">
+
+            <article class="project-card">
+                <div class="project-visual visual-one">VMWARE</div>
+                <div class="project-content">
+                    <p class="project-category">SYSTEMS ADMINISTRATION</p>
+                    <h3>Virtual IT Lab Environment</h3>
+                    <p>
+                        Building and managing Windows and Linux
+                        virtual machines for systems administration
+                        and technical practice.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual visual-two">OPENSSL</div>
+                <div class="project-content">
+                    <p class="project-category">LINUX & SCRIPTING</p>
+                    <h3>Bash File Encryption Tool</h3>
+                    <p>
+                        A Bash and OpenSSL project involving
+                        AES-256-CBC encryption, decryption,
+                        and file integrity verification.
+                    </p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-visual visual-three">WIRESHARK</div>
+                <div class="project-content">
+                    <p class="project-category">NETWORK SECURITY</p>
+                    <h3>Network Traffic Analysis</h3>
+                    <p>
+                        Examining network traffic and reviewing
+                        security-related activity through
+                        cybersecurity lab exercises.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CYBERSECURITY -->
+    <section id="cybersecurity" class="cyber-section">
+        <div class="section-heading">
+            <p class="eyebrow">SECURITY & INVESTIGATION</p>
+            <h2>Cybersecurity Experience</h2>
+        </div>
+
+        <p>
+            Through academic coursework and hands-on exercises,
+            I have developed experience investigating security
+            alerts, reviewing network traffic, and evaluating
+            potential threats using tools such as Wireshark,
+            Nmap, OpenSearch, and Suricata.
+        </p>
+    </section>
+
+    <!-- IT EXPERIENCE -->
+    <section id="experience" class="experience-section">
+        <div class="section-heading">
+            <p class="eyebrow">PROFESSIONAL BACKGROUND</p>
             <h2>IT Experience</h2>
-            <p>Hands-on experience in IT support, account administration,
-            troubleshooting, and Microsoft 365.</p>
-        </section>
+        </div>
 
-        <section id="projects" class="section">
-            <h2>Technical Projects</h2>
-            <p>Virtualization, Linux, Bash scripting, and encryption projects.</p>
-        </section>
-
-        <section id="cybersecurity" class="section">
-            <h2>Cybersecurity</h2>
-            <p>Network analysis, security investigations, and digital forensics.</p>
-        </section>
-
-        <section id="about" class="section">
-            <h2>About Me</h2>
+        <div class="experience-card">
+            <p class="project-category">2026 – PRESENT</p>
+            <h3>IT Support Technician</h3>
+            <p class="company">IFD</p>
             <p>
-                I'm an IT and cybersecurity student at Highline College
-                pursuing a Bachelor of Applied Science in Cybersecurity
-                and Digital Forensics.
+                Supporting day-to-day IT operations through
+                account administration, Microsoft 365 support,
+                user troubleshooting, onboarding and offboarding,
+                and technical documentation.
             </p>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>JUSTIN LY | IT & CYBERSECURITY PORTFOLIO</p>
-    </footer>
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="section-heading">
+            <p class="eyebrow">BACKGROUND</p>
+            <h2>Education & Certification</h2>
+        </div>
+
+        <div class="education-card">
+            <h3>Highline College</h3>
+            <p>BAS in Cybersecurity and Digital Forensics</p>
+            <p class="muted">Expected December 2026</p>
+        </div>
+
+        <div class="education-card">
+            <h3>Mile2 CPTE</h3>
+            <p>Certified Penetration Testing Engineer</p>
+            <p class="muted">Earned December 2024</p>
+        </div>
+
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/justinly293"
+               target="_blank">LinkedIn ↗</a>
+
+            <a href="https://github.com/Justin-L293"
+               target="_blank">GitHub ↗</a>
+
+            <a href="mailto:justin.ly.tech@gmail.com">Email ↗</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>JUSTIN LY | IT & CYBERSECURITY PORTFOLIO</p>
+    <p class="muted">LEARN · SOLVE · SECURE</p>
+</footer>
 
 </body>
 </html>
