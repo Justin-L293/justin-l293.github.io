@@ -836,3 +836,34 @@ main {
         justify-content: center;
     }
 }
+
+/* HERO LAYOUT SPACING FIX */
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 7%;
+    padding-right: 7%;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 45px;
+}
+
+.hero-side {
+    width: 100%;
+    max-width: 390px;
+    justify-self: center;
+}
+
+.tech-panel {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 850px) {
+    .hero {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+}
