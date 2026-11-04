@@ -493,3 +493,125 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* HERO SECTION - PROFESSIONAL DESIGN */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 620px;
+    background-color: #101A2C;
+    background-image:
+        linear-gradient(rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.045) 1px, transparent 1px),
+        radial-gradient(ellipse at 80% 45%, #1d3b69 0%, transparent 55%);
+    background-size: 45px 45px, 45px 45px, auto;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.hero-decoration {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    max-width: 440px;
+    display: flex;
+    justify-content: center;
+}
+
+.tech-panel {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(23, 36, 58, 0.92);
+    border: 1px solid #34527C;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.tech-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 20px;
+    background: #1D2D47;
+    border-bottom: 1px solid #34527C;
+    color: #AAB6C8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #60A5FA;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #60A5FA;
+}
+
+.panel-status {
+    margin-left: auto;
+    color: #60A5FA;
+}
+
+.tech-panel-content {
+    padding: 25px 22px;
+}
+
+.tech-label {
+    color: #60A5FA;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid #293B55;
+    color: #E2E8F0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.tech-number {
+    color: #60A5FA;
+    font-size: 13px;
+}
+
+.tech-terminal {
+    margin-top: 25px;
+    padding: 13px;
+    background: #101A2C;
+    border-radius: 5px;
+    color: #AAB6C8;
+    font-size: 11px;
+}
+
+.tech-terminal span {
+    color: #60A5FA;
+    font-weight: bold;
+}
+
+@media (max-width: 850px) {
+    .hero-decoration {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tech-panel {
+        max-width: 100%;
+    }
+}
