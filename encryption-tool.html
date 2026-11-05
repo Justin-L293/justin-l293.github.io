@@ -34,29 +34,29 @@
             <p class="project-category" style="margin-bottom: 20px;">LINUX & SCRIPTING SECURITY</p>
 
             <p>
-                Engineered a robust command-line file encryption and decryption utility written in Bash and powered by OpenSSL[cite: 91]. The tool provides strong local data protection using the industry-standard Advanced Encryption Standard with Cipher Block Chaining (AES-256-CBC)[cite: 91].
+                Engineered a robust command-line file encryption and decryption utility written in Bash and powered by OpenSSL. The tool provides strong local data protection using the industry-standard Advanced Encryption Standard with Cipher Block Chaining (AES-256-CBC).
             </p>
 
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Key Architecture & Implementation</h3>
             <ul class="experience-list">
-                <li><strong>AES-256-CBC Encryption:</strong> Utilizes a 256-bit key with salt generation to secure both text and binary files against pattern and brute-force attacks[cite: 91].</li>
+                <li><strong>AES-256-CBC Encryption:</strong> Utilizes a 256-bit key with salt generation to secure both text and binary files against pattern and brute-force attacks.</li>
                 <li><strong>Automated Key Management:</strong> Automatically generates cryptographically secure keys via OpenSSL's pseudorandom number generator when a custom key is not provided[cite: 91].</li>
-                <li><strong>Secure Key Storage:</strong> Stores generated keys locally in a dedicated file (`encryption_key.txt`) protected by restricted user permissions (`chmod 600`) to prevent unauthorized access[cite: 91].</li>
-                <li><strong>File Integrity Verification:</strong> Computes and stores SHA-256 file hashes (`.hash`) prior to encryption, verifying post-decryption integrity to ensure files have not been modified or corrupted[cite: 91].</li>
-                <li><strong>Rigorous Error Handling:</strong> Validates file paths, readability, output directory write permissions, and operation flags with informative error messaging and a built-in help menu (`-h`)[cite: 91].</li>
+                <li><strong>Secure Key Storage:</strong> Stores generated keys locally in a dedicated file (`encryption_key.txt`) protected by restricted user permissions (`chmod 600`) to prevent unauthorized access.</li>
+                <li><strong>File Integrity Verification:</strong> Computes and stores SHA-256 file hashes (`.hash`) prior to encryption, verifying post-decryption integrity to ensure files have not been modified or corrupted.</li>
+                <li><strong>Rigorous Error Handling:</strong> Validates file paths, readability, output directory write permissions, and operation flags with informative error messaging and a built-in help menu (`-h`).</li>
             </ul>
 
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Testing & Validation Highlights</h3>
             <p class="muted" style="margin-bottom: 15px;">
-                The utility underwent rigorous functional, security, and edge-case testing, including validating performance with large binary files (1.1 GB), handling special character filenames, and ensuring improper keys are correctly rejected[cite: 91].
+                The utility underwent rigorous functional, security, and edge-case testing, including validating performance with large binary files (1.1 GB), handling special character filenames, and ensuring improper keys are correctly rejected.
             </p>
 
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Technologies & Tools</h3>
             <p class="muted" style="margin-bottom: 10px;">
-                <strong>Tools:</strong> Bash, Linux (Ubuntu 24.04), OpenSSL, AES-256-CBC, SHA-256[cite: 91]
+                <strong>Tools:</strong> Bash, Linux (Ubuntu 24.04), OpenSSL, AES-256-CBC, SHA-256
             </p>
             <p class="muted">
-                <strong>Skills:</strong> Shell Scripting, Cryptographic Implementation, Key Management, File Integrity Verification, Defensive Design[cite: 91]
+                <strong>Skills:</strong> Shell Scripting, Cryptographic Implementation, Key Management, File Integrity Verification, Defensive Design
             </p>
 
             <div style="margin-top: 45px;">
