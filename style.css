@@ -624,4 +624,63 @@ footer .muted {
     transform: translateX(4px);
 }
 
+/* Responsive Grid for Project Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
+/* Ensure Project Cards Scale Fluidly */
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-content {
+    padding: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Make images and containers mobile-safe */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent long code snippets or pre-formatted text from breaking mobile layouts */
+pre, code {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .intro-section {
+        padding: 20px 15px;
+    }
+}
