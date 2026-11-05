@@ -46,6 +46,17 @@
                 <li><strong>Rigorous Error Handling:</strong> Validates file paths, readability, output directory write permissions, and operation flags with informative error messaging and a built-in help menu (`-h`).</li>
             </ul>
 
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">System Architecture & Flowchart</h3>
+            <p class="muted" style="margin-bottom: 20px;">
+                The following process flow outlines the script's core logic branches, including file validation, conditional routing for encryption versus decryption, key verification, and SHA-256 integrity checks.
+            </p>
+            
+            <!-- FLOWCHART CONTAINER -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/encryption-flowchart.png" alt="Bash Encryption Tool Process Flowchart" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Process Flowchart: Script Logic, Validation, and Integrity Verification</p>
+            </div>
+            
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Testing & Validation Highlights</h3>
             <p class="muted" style="margin-bottom: 15px;">
                 The utility underwent rigorous functional, security, and edge-case testing, including validating performance with large binary files (1.1 GB), handling special character filenames, and ensuring improper keys are correctly rejected.
