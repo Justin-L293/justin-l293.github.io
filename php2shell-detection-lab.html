@@ -34,14 +34,14 @@
             <p class="project-category" style="margin-bottom: 20px;">DETECTION ENGINEERING & THREAT HUNTING</p>
 
             <p>
-                Conducted a comprehensive threat analysis and detection engineering lab targeting the <strong>PHP2Shell</strong> vulnerabilities (CVE-2026-109618 and CVE-2026-109619)[cite: 5]. Analyzed malicious PCAP traffic captures, evaluated Emerging Threats (ET) Suricata rules, and authored custom detection signatures with PCRE tuning to balance true positive detection against false positive rates[cite: 5].
+                Conducted a comprehensive threat analysis and detection engineering lab targeting the <strong>PHP2Shell</strong> vulnerabilities (CVE-2026-109618 and CVE-2026-109619). Analyzed malicious PCAP traffic captures, evaluated Emerging Threats (ET) Suricata rules, and authored custom detection signatures with PCRE tuning to balance true positive detection against false positive rates.
             </p>
 
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Part 1: Packet Forensics & Traffic Analysis</h3>
             <ul class="experience-list">
-                <li><strong>Baseline vs. Attack Comparison:</strong> Inspected positive (`php2shell.pcap`) and negative (`php2shell-neg.pcap`) traffic captures against an Apache/2.4.58 and PHP/8.3.35 server stack[cite: 5].</li>
-                <li><strong>Anomaly Identification:</strong> Isolated atypical multipart upload structures, oversized 70KB application form inputs, and serialized PHP array payloads (`a:`) sent to API endpoints[cite: 5].</li>
-                <li><strong>Validation Assessment:</strong> Differentiated between reconnaissance activity (`/info.php`), stress testing, and potential exploit framing[cite: 5].</li>
+                <li><strong>Baseline vs. Attack Comparison:</strong> Inspected positive (`php2shell.pcap`) and negative (`php2shell-neg.pcap`) traffic captures against an Apache/2.4.58 and PHP/8.3.35 server stack.</li>
+                <li><strong>Anomaly Identification:</strong> Isolated atypical multipart upload structures, oversized 70KB application form inputs, and serialized PHP array payloads (`a:`) sent to API endpoints.</li>
+                <li><strong>Validation Assessment:</strong> Differentiated between reconnaissance activity (`/info.php`), stress testing, and potential exploit framing.</li>
             </ul>
 
             <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Part 2: Emerging Threats Rule Evaluation</h3>
@@ -49,37 +49,47 @@
                 Tested and verified the performance of existing ET Suricata signatures:
             </p>
             <ul class="experience-list">
-                <li><strong>Successful Alerts:</strong> Triggered high-confidence alerts on SID 2072549 (Header Amplification) and SID 2072556 (Excessive Multipart Part Count)[cite: 5].</li>
-                <li><strong>False Positive Auditing:</strong> Verified zero false positives from baseline traffic on negative captures while documenting why specific signature criteria failed to match[cite: 5].</li>
+                <li><strong>Successful Alerts:</strong> Triggered high-confidence alerts on SID 2072549 (Header Amplification) and SID 2072556 (Excessive Multipart Part Count).</li>
+                <li><strong>False Positive Auditing:</strong> Verified zero false positives from baseline traffic on negative captures while documenting why specific signature criteria failed to match.</li>
             </ul>
 
             <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Part 3: Custom Rule Authoring & PCRE Tuning</h3>
             <p class="muted" style="margin-bottom: 15px;">
-                Authored and refined custom Suricata HTTP inspection rules (`local.rules`) to capture serialization attempts:
+                Authored and refined custom Suricata HTTP inspection rules (`local.rules`) to capture serialization attempts and server version banners:
             </p>
+
+            <!-- CUSTOM RULES CODE BLOCK -->
+            <div style="background: #111; color: #00ff66; font-family: monospace; padding: 18px; border-radius: 6px; font-size: 13px; line-height: 1.5; overflow-x: auto; margin-bottom: 25px; border: 1px solid var(--border);">
+                <p style="color: var(--muted); margin-bottom: 8px;"># local.rules - Custom Detection Signatures</p>
+                <p style="margin-bottom: 10px;"># Rule 1: Detects PHP serialized array payloads sent to the API endpoint</p>
+                <p style="margin-bottom: 15px; word-break: break-all;">alert tcp any any -> any 80 (msg:"LOCAL PHP2Shell Serialized Array Payload in API Request"; flow:to_server,established; content:"POST"; http_method; content:"/api"; http_uri; content:"a:"; http_client_body; sid:9000001; rev:1;)</p>
+                <p style="margin-bottom: 10px;"># Rule 2: Detects vulnerable Apache and PHP server response banners</p>
+                <p style="margin-bottom: 0; word-break: break-all;">alert tcp any 80 -> any any (msg:"LOCAL Vulnerable Apache and PHP Version Banner Response"; flow:from_server,established; content:"Apache/2.4.58"; http_header; content:"PHP/8.3.35"; http_header; sid:9000002; rev:1;)</p>
+            </div>
+
             <ul class="experience-list">
-                <li><strong>Initial Rule Iteration:</strong> Created Rule 9000001 targeting POST requests to `/api` containing serialized strings (`a:`), which successfully detected threats but introduced false positives on benign traffic[cite: 5].</li>
-                <li><strong>PCRE Optimization:</strong> Tuned the signature using precise syntax (`a:1:{`) to enforce strict PHP array serialization structures, reducing false positive occurrences on baseline traffic while maintaining true positive fidelity[cite: 5].</li>
+                <li><strong>Initial Rule Iteration:</strong> Created Rule 9000001 targeting POST requests to `/api` containing serialized strings (`a:`), which successfully detected threats but introduced false positives on benign baseline traffic.</li>
+                <li><strong>PCRE Optimization:</strong> Tuned the signature to enforce strict PHP array serialization structures, successfully reducing false positive alert noise while maintaining true positive fidelity.</li>
             </ul>
 
             <!-- ORIGINAL BROAD RULE OUTPUT -->
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 25px; margin-top: 25px; text-align: center;">
                 <img src="images/Rules-Original.PNG" alt="Initial Untuned Suricata Rule Execution Output" style="width: 100%; max-width: 850px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
-                <p style="font-size: 13px; color: var(--muted);">Initial Evaluation: Untuned Rule 9000001 generating 6 alerts across benign baseline traffic (`php2shell-neg.pcap`)[cite: 5, 7].</p>
+                <p style="font-size: 13px; color: var(--muted);">Initial Evaluation: Untuned Rule 9000001 generating alerts across benign baseline traffic (`php2shell-neg.pcap`).</p>
             </div>
 
-            <!-- COMPARISON BEFORE & AFTER TUNING -->
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
-                <img src="images/Tuned-Top-Original-Bot.PNG" alt="Comparison of Tuned vs Original Suricata Signature Performance" style="width: 100%; max-width: 850px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
-                <p style="font-size: 13px; color: var(--muted);">Signature Tuning Comparison: Top terminal window demonstrates tuned rule results reducing baseline alert noise compared to original broad matching below[cite: 5, 8].</p>
+            <!-- TUNED RULE EXECUTION OUTPUT (WITH HORIZONTAL SCROLL FIX FOR WIDE IMAGES) -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow-x: auto; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/Rule-Tuned.PNG" alt="Tuned Suricata Rule Execution Output" style="width: 100%; min-width: 600px; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Tuned Evaluation: Suricata execution showing optimized rule performance and reduced noise on target PCAP captures.</p>
             </div>
 
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Technologies & Tools</h3>
             <p class="muted" style="margin-bottom: 10px;">
-                <strong>Tools:</strong> Suricata 8.0.3, jq, Wireshark, PCAP Analysis Utilities, Linux Command Line[cite: 5]
+                <strong>Tools:</strong> Suricata 8.0.3, jq, Wireshark, PCAP Analysis Utilities, Linux Command Line
             </p>
             <p class="muted">
-                <strong>Skills:</strong> Detection Engineering, Suricata Rule Authoring, PCRE Regex Tuning, False Positive Mitigation, Threat Intelligence, Packet Forensics[cite: 5]
+                <strong>Skills:</strong> Detection Engineering, Suricata Rule Authoring, PCRE Regex Tuning, False Positive Mitigation, Threat Intelligence, Packet Forensics
             </p>
 
             <div style="margin-top: 45px;">
