@@ -363,6 +363,11 @@ section {
 .experience-card {
     padding: 30px;
     max-width: 800px;
+    margin-bottom: 22px;
+}
+
+.experience-card:last-child {
+    margin-bottom: 0;
 }
 
 .experience-heading {
