@@ -58,7 +58,7 @@
                 Authored and refined custom Suricata HTTP inspection rules (`local.rules`) to capture serialization attempts and server version banners:
             </p>
 
-            <!-- CUSTOM RULES CODE BLOCK -->
+            <!-- UPDATED CUSTOM RULES CODE BLOCK -->
             <div style="background: #111; color: #00ff66; font-family: monospace; padding: 18px; border-radius: 6px; font-size: 13px; line-height: 1.5; overflow-x: auto; margin-bottom: 25px; border: 1px solid var(--border);">
                 <p style="color: var(--muted); margin-bottom: 8px;"># local.rules - Custom Detection Signatures</p>
                 <p style="margin-bottom: 10px;"># Rule 1: Detects PHP serialized array payloads sent to the API endpoint</p>
@@ -78,7 +78,7 @@
                 <p style="font-size: 13px; color: var(--muted);">Initial Evaluation: Untuned Rule 9000001 generating alerts across benign baseline traffic (`php2shell-neg.pcap`).</p>
             </div>
 
-            <!-- TUNED RULE EXECUTION OUTPUT (WITH HORIZONTAL SCROLL FIX FOR WIDE IMAGES) -->
+            <!-- TUNED RULE EXECUTION OUTPUT -->
             <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow-x: auto; padding: 20px; margin-bottom: 35px; text-align: center;">
                 <img src="images/Rule-Tuned.PNG" alt="Tuned Suricata Rule Execution Output" style="width: 100%; min-width: 600px; max-width: 100%; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
                 <p style="font-size: 13px; color: var(--muted);">Tuned Evaluation: Suricata execution showing optimized rule performance and reduced noise on target PCAP captures.</p>
