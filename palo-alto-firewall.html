@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palo Alto Firewall Configuration | Justin Ly Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html#home" class="logo">JUSTIN LY<span>.</span></a>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">IT Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#cybersecurity">Cybersecurity</a>
+        <a href="index.html#about">About</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- PROJECT DETAILS SECTION -->
+<section class="intro-section">
+    <div class="about-layout" style="grid-template-columns: 1fr;">
+        <div class="about-description" style="max-width: 900px; margin: auto;">
+            <p class="eyebrow">PROJECT DEEP DIVE</p>
+            <h2>Palo Alto Firewall Configuration & Security Policies</h2>
+            
+            <p class="project-category" style="margin-bottom: 20px;">NETWORK SECURITY & FIREWALL ADMINISTRATION</p>
+
+            <p>
+                Architected and configured enterprise-grade firewall security policies, Network Address Translation (NAT) rules, and secure remote access configurations using <strong>Palo Alto Networks</strong> firewalls and <strong>GlobalProtect</strong> in a controlled lab environment.
+            </p>
+
+            <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Core Architecture & Policy Implementation</h3>
+            <ul class="experience-list">
+                <li><strong>Security Policy Rules:</strong> Developed zone-based access control rules enforcing application-layer visibility, user-ID integration, and the principle of least privilege across internal and external segments.</li>
+                <li><strong>NAT Configuration:</strong> Configured Source NAT (Dynamic IP and Port) for outbound internet access and Destination NAT (Port Forwarding) for secure inbound services.</li>
+                <li><strong>File-Blocking & Threat Prevention:</strong> Implemented data filtering and file-blocking profiles to restrict unauthorized executable uploads and mitigate malware delivery channels.</li>
+            </ul>
+
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Secure Remote Access & HIP Profiles</h3>
+            <p class="muted" style="margin-bottom: 15px;">
+                Configured <strong>GlobalProtect</strong> VPN combined with Host Information Profile (HIP) checking to validate endpoint security compliance before granting corporate network access:
+            </p>
+            <ul class="experience-list">
+                <li><strong>Endpoint Compliance:</strong> Verified local antivirus status, OS patch levels, and disk encryption requirements through custom HIP checks.</li>
+                <li><strong>Tunnel Management:</strong> Configured gateway settings, client authentication profiles, and split-tunneling parameters.</li>
+            </ul>
+
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Troubleshooting & Diagnostic Methodology</h3>
+            <p class="muted" style="margin-bottom: 15px;">
+                Utilized native PAN-OS diagnostic tools and packet filters to diagnose connectivity issues and validate traffic flows:
+            </p>
+            <ul class="experience-list">
+                <li><strong>Packet Capture (Pcap):</strong> Captured traffic across interface stages to analyze drop causes and session bottlenecks.</li>
+                <li><strong>Flow Logic Evaluation:</strong> Traced sessions using the CLI flow debug tools (`test security-policy-match`) to verify correct rule evaluation.</li>
+            </ul>
+
+            <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Technologies & Tools</h3>
+            <p class="muted" style="margin-bottom: 10px;">
+                <strong>Tools:</strong> Palo Alto Firewall (PAN-OS), GlobalProtect VPN
+            </p>
+            <p class="muted">
+                <strong>Skills:</strong> Firewall Administration, Security Policy Design, NAT Configuration, File-Blocking, Network Troubleshooting
+            </p>
+
+            <div style="margin-top: 45px;">
+                <a href="index.html#projects" class="button">← Back to Portfolio Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>JUSTIN LY | IT & CYBERSECURITY PORTFOLIO</p>
+    <p class="muted">LEARN · SOLVE · SECURE</p>
+</footer>
+
+</body>
+</html>
