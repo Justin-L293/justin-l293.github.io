@@ -47,15 +47,39 @@
                 <li><strong>Outbound Activity:</strong> Reports of suspicious or malicious emails transmitted from the compromised employee account.</li>
             </ul>
 
-            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Email Header & SPF Record Analysis</h3>
-            <p class="muted" style="margin-bottom: 15px;">
-                Conducted deep-dive header analysis to differentiate between benign vendor communications and malicious spoofed emails:
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Benign Baseline Email & SPF Analysis</h3>
+            <p class="muted" style="margin-bottom: 20px;">
+                Analyzed standard corporate email headers (`steampowered.com`) to establish a trusted authentication baseline covering DKIM signatures, SPF pass records, and DMARC enforcement.
             </p>
-            <ul class="experience-list">
-                <li><strong>Authentication Headers:</strong> Evaluated <code>Authentication-Results</code>, DKIM passes, and SPF validation parameters across incoming mail servers.</li>
-                <li><strong>Domain Verification:</strong> Used domain tools (Dmarcly) to inspect and flatten SPF records, validating permitted sender IP blocks and detecting misconfigured policy rules.</li>
-                <li><strong>Attachment Triage:</strong> Established safe inspection protocols utilizing VirusTotal, full message source headers, and Windows Defender runtime scanning to isolate suspected malicious attachments.</li>
-            </ul>
+
+            <!-- BENIGN AUTHENTICATION HEADER -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 25px; text-align: center;">
+                <img src="images/Benign-Authen.png" alt="Benign Email Authentication Results Header" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Benign Baseline: `Authentication-Results` Header with DKIM, SPF, and DMARC Pass</p>
+            </div>
+
+            <!-- BENIGN DMARCLY SPF RECORD -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/Benign-Dmarcly.png" alt="Benign SPF Record Resolution via Dmarcly" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Dmarcly Verification: Flattened SPF Record and Permitted Sender IP Ranges (`steampowered.com`)</p>
+            </div>
+
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Suspicious Phishing Email & Header Forensics</h3>
+            <p class="muted" style="margin-bottom: 20px;">
+                Inspected raw message headers from a flagged phishing email to isolate mismatching envelope senders (`Return-Path`), source IP addresses, and underlying SPF inclusion structures.
+            </p>
+
+            <!-- SUSPICIOUS AUTHENTICATION HEADER -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 25px; text-align: center;">
+                <img src="images/Sus-Email.png" alt="Suspicious Phishing Email Authentication Results Header" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Threat Analysis: `Authentication-Results` Header Showing Source IP `91.232.28.235`</p>
+            </div>
+
+            <!-- SUSPICIOUS DMARCLY SPF RECORD -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/Sus-Authen.png" alt="Suspicious Domain SPF Record Analysis via Dmarcly" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Dmarcly Verification: Flattened SPF Record and IP Block Ingestion (`email.fundscrip.com`)</p>
+            </div>
 
             <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Structured 5-Stage Incident Response Lifecycle</h3>
             <ul class="experience-list">
