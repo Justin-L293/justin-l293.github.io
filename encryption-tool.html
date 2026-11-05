@@ -40,7 +40,7 @@
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Key Architecture & Implementation</h3>
             <ul class="experience-list">
                 <li><strong>AES-256-CBC Encryption:</strong> Utilizes a 256-bit key with salt generation to secure both text and binary files against pattern and brute-force attacks.</li>
-                <li><strong>Automated Key Management:</strong> Automatically generates cryptographically secure keys via OpenSSL's pseudorandom number generator when a custom key is not provided[cite: 91].</li>
+                <li><strong>Automated Key Management:</strong> Automatically generates cryptographically secure keys via OpenSSL's pseudorandom number generator when a custom key is not provided.</li>
                 <li><strong>Secure Key Storage:</strong> Stores generated keys locally in a dedicated file (`encryption_key.txt`) protected by restricted user permissions (`chmod 600`) to prevent unauthorized access.</li>
                 <li><strong>File Integrity Verification:</strong> Computes and stores SHA-256 file hashes (`.hash`) prior to encryption, verifying post-decryption integrity to ensure files have not been modified or corrupted.</li>
                 <li><strong>Rigorous Error Handling:</strong> Validates file paths, readability, output directory write permissions, and operation flags with informative error messaging and a built-in help menu (`-h`).</li>
