@@ -41,9 +41,9 @@
             <ul class="experience-list">
                 <li><strong>AES-256-CBC Encryption:</strong> Utilizes a 256-bit key with salt generation to secure both text and binary files against pattern and brute-force attacks.</li>
                 <li><strong>Automated Key Management:</strong> Automatically generates cryptographically secure keys via OpenSSL's pseudorandom number generator when a custom key is not provided.</li>
-                <li><strong>Secure Key Storage:</strong> Stores generated keys locally in a dedicated file (`encryption_key.txt`) protected by restricted user permissions (`chmod 600`) to prevent unauthorized access.</li>
-                <li><strong>File Integrity Verification:</strong> Computes and stores SHA-256 file hashes (`.hash`) prior to encryption, verifying post-decryption integrity to ensure files have not been modified or corrupted.</li>
-                <li><strong>Rigorous Error Handling:</strong> Validates file paths, readability, output directory write permissions, and operation flags with informative error messaging and a built-in help menu (`-h`).</li>
+                <li><strong>Secure Key Storage:</strong> Stores generated keys locally in a dedicated file (<code>encryption_key.txt</code>) protected by restricted user permissions (<code>chmod 600</code>) to prevent unauthorized access.</li>
+                <li><strong>File Integrity Verification:</strong> Computes and stores SHA-256 file hashes (<code>.hash</code>) prior to encryption, verifying post-decryption integrity to ensure files have not been modified or corrupted.</li>
+                <li><strong>Rigorous Error Handling:</strong> Validates file paths, readability, output directory write permissions, and operation flags with informative error messaging and a built-in help menu (<code>-h</code>).</li>
             </ul>
 
             <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">System Architecture & Flowchart</h3>
@@ -59,8 +59,14 @@
 
             <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Command-Line Interface & Usability</h3>
             <p class="muted" style="margin-bottom: 20px;">
-                The tool features a built-in help and usage menu (`-h`), designed to guide users through required parameters, operation flags, and usage examples directly within the terminal interface.
+                The tool features a built-in help and usage menu (<code>-h</code>), designed to guide users through required parameters, operation flags, and usage examples directly within the terminal interface.
             </p>
+
+            <!-- HELP PROMPT CONTAINER -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/Help-and-Usage.png" alt="Bash Encryption Tool Help and Usage Prompt" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Terminal Output: Help and Usage Prompt (<code>-h</code> flag execution)</p>
+            </div>
 
             <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Functional & Performance Testing Artifacts</h3>
             <p class="muted" style="margin-bottom: 20px;">
@@ -82,12 +88,6 @@
                     <p style="font-size: 13px; color: var(--muted); text-align: center;">Test Case 4: Large Binary File (1.1 GB)</p>
                 </div>
             
-            </div>
-            
-            <!-- HELP PROMPT CONTAINER -->
-            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
-                <img src="images/Help-and-Usage.png" alt="Bash Encryption Tool Help and Usage Prompt" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
-                <p style="font-size: 13px; color: var(--muted);">Terminal Output: Help and Usage Prompt (`-h` flag execution)</p>
             </div>
             
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Testing & Validation Highlights</h3>
