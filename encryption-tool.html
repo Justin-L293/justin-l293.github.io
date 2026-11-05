@@ -84,6 +84,26 @@
                 <img src="images/Test-Case-4.png" alt="Test Case 4: Large Binary File Encryption" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
                 <p style="font-size: 13px; color: var(--muted);">Test Case 4: Large Binary File Performance Testing (1.1 GB)</p>
             </div>
+
+            <!-- TAMPER & ERROR HANDLING (Secure-Key-Storage.png) -->
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Integrity & Tamper Detection Testing</h3>
+            <p class="muted" style="margin-bottom: 20px;">
+                Terminal output demonstrating file tampering (modifying the ciphertext) and the tool's robust error handling capturing the integrity failure with descriptive troubleshooting guidance.
+            </p>
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/Secure-Key-Storage.png" alt="Tamper Detection and Error Handling Output" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Test Artifact: Tamper Detection & Decryption Error Handling</p>
+            </div>
+
+            <!-- KEY PERMISSIONS (Test-Case-9.png) -->
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Secure Key Management & Access Control</h3>
+            <p class="muted" style="margin-bottom: 20px;">
+                Test Case 9 validation verifying that generated encryption keys are protected locally using restricted user permissions (<code>chmod 600</code> / <code>-rw-------</code>).
+            </p>
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; padding: 20px; margin-bottom: 35px; text-align: center;">
+                <img src="images/Test-Case-9.png" alt="Test Case 9: Secure Key Permissions Verification" style="width: 100%; max-width: 800px; border-radius: 4px; display: block; margin: 0 auto 15px auto;">
+                <p style="font-size: 13px; color: var(--muted);">Test Case 9: Restricted Permission Verification (`-rw-------` on `encryption_key.txt`)</p>
+            </div>
             
             <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Testing & Validation Highlights</h3>
             <p class="muted" style="margin-bottom: 15px;">
