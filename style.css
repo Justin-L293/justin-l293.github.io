@@ -609,3 +609,19 @@ footer .muted {
     display: block;
     background-color: var(--surface-light);
 }
+
+.project-link {
+    display: inline-block;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+.project-link:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+
