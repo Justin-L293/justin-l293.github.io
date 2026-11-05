@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Incident Response Playbook | Justin Ly Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html#home" class="logo">JUSTIN LY<span>.</span></a>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#experience">IT Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#cybersecurity">Cybersecurity</a>
+        <a href="index.html#about">About</a>
+    </nav>
+</header>
+
+<main>
+
+<!-- PROJECT DETAILS SECTION -->
+<section class="intro-section">
+    <div class="about-layout" style="grid-template-columns: 1fr;">
+        <div class="about-description" style="max-width: 900px; margin: auto;">
+            <p class="eyebrow">PROJECT DEEP DIVE</p>
+            <h2>Phishing Triage & Incident Response Playbook</h2>
+            
+            <p class="project-category" style="margin-bottom: 20px;">INCIDENT RESPONSE & THREAT ANALYSIS</p>
+
+            <p>
+                Engineered a comprehensive incident response playbook and analysis workflow targeting credential compromise via spear-phishing attacks[cite: 3, 4]. The framework follows structured guidance from <strong>NIST SP 800-61</strong> and maps directly to the <strong>MITRE ATT&CK</strong> framework (T1566 Phishing, T1078 Valid Accounts)[cite: 4, 6].
+            </p>
+
+            <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Incident Overview & Indicators of Compromise (IOCs)</h3>
+            <p class="muted" style="margin-bottom: 15px;">
+                Simulated a scenario where an employee received a phishing email impersonating a trusted service provider, leading to credential harvesting and unauthorized corporate account access[cite: 4]. Key IOCs identified include:
+            </p>
+            <ul class="experience-list">
+                <li><strong>Suspicious Logins:</strong> Login attempts originating from unusual IP addresses or unfamiliar geographic locations[cite: 4].</li>
+                <li><strong>Account Anomalies:</strong> Unauthorized email forwarding rules and multi-factor authentication (MFA) fatigue notifications[cite: 4].</li>
+                <li><strong>Outbound Activity:</strong> Reports of suspicious or malicious emails transmitted from the compromised employee account[cite: 4].</li>
+            </ul>
+
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Email Header & SPF Record Analysis</h3>
+            <p class="muted" style="margin-bottom: 15px;">
+                Conducted deep-dive header analysis to differentiate between benign vendor communications and malicious spoofed emails[cite: 9, 11]:
+            </p>
+            <ul class="experience-list">
+                <li><strong>Authentication Headers:</strong> Evaluated <code>Authentication-Results</code>, DKIM passes, and SPF validation parameters across incoming mail servers[cite: 9, 11].</li>
+                <li><strong>Domain Verification:</strong> Used domain tools (Dmarcly) to inspect and flatten SPF records, validating permitted sender IP blocks and detecting misconfigured policy rules[cite: 10, 12].</li>
+                <li><strong>Attachment Triage:</strong> Established safe inspection protocols utilizing VirusTotal, full message source headers, and Windows Defender runtime scanning to isolate suspected malicious attachments[cite: 12].</li>
+            </ul>
+
+            <h3 style="margin-top: 35px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Structured 5-Stage Incident Response Lifecycle</h3>
+            <ul class="experience-list">
+                <li><strong>Phase 1 - Acquire & Preserve:</strong> Harvested original email headers, authentication logs, VPN records, and identity provider telemetry to establish timeline integrity[cite: 4, 5].</li>
+                <li><strong>Phase 2 - Containment:</strong> Executed immediate containment by disabling compromised accounts, forcing credential resets, revoking active session tokens, and purging unauthorized inbox rules[cite: 5].</li>
+                <li><strong>Phase 3 - Eradication:</strong> Rotated compromised passwords, enforced strict organization-wide MFA, and updated email security gateway filters to block malicious infrastructure[cite: 6].</li>
+                <li><strong>Phase 4 - Recovery:</strong> Verified normal operations, monitored outbound traffic for residual anomalies, and provided targeted user support[cite: 7].</li>
+                <li><strong>Phase 5 - Lessons Learned:</strong> Documented root causes (insufficient phishing awareness, weak credential controls) and recommended defensive upgrades such as conditional access policies and recurring simulations[cite: 8].</li>
+            </ul>
+
+            <h3 style="margin-top: 30px; margin-bottom: 12px; font-family: 'Montserrat', sans-serif;">Technologies & Tools</h3>
+            <p class="muted" style="margin-bottom: 10px;">
+                <strong>Frameworks & Standards:</strong> NIST SP 800-61, MITRE ATT&CK (T1566, T1078)[cite: 4, 6]
+            </p>
+            <p class="muted" style="margin-bottom: 10px;">
+                <strong>Analysis Tools:</strong> Dmarcly, VirusTotal, Windows Defender, Email Header Parsers[cite: 10, 12]
+            </p>
+            <p class="muted">
+                <strong>Skills:</strong> Threat Intelligence, Incident Response Playbook Design, Email Header Forensics, SPF/DKIM Validation, Root-Cause Analysis
+            </p>
+
+            <div style="margin-top: 45px;">
+                <a href="index.html#projects" class="button">← Back to Portfolio Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>JUSTIN LY | IT & CYBERSECURITY PORTFOLIO</p>
+    <p class="muted">LEARN · SOLVE · SECURE</p>
+</footer>
+
+</body>
+</html>
